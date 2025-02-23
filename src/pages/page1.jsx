@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 export default function Page1() {
   return (
     <div className="page1">
@@ -15,15 +16,15 @@ export default function Page1() {
         analyze performance, and simplify sharing—all in a blink!
       </div>
       <div className="page1buttons">
-        <div className="addbuttonpg1">
+        <Link to={'/shorten-link'} className="addbuttonpg1">
           <img src="/add.png" alt="Arrow" className="getstartedimg" /> Shorten
           Link
-        </div>
+        </Link>
 
-        <div className="addbuttonpg1bg">
+        <Link to={'/dashboard'} className="addbuttonpg1bg">
           <img src="/dashboard.png" alt="Arrow" className="getstartedimg" />{' '}
           Dashboard
-        </div>
+        </Link>
       </div>
     </div>
   );

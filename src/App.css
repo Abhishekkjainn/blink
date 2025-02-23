@@ -62,6 +62,7 @@ body{
     color: grey;
     margin: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 .link:hover{
     color: white;
@@ -85,6 +86,7 @@ body{
     padding-top: 6px;
     border-radius: 4px;
     margin-right: 12px;
+    text-decoration: none;
 }
 
 /*Page1*/
@@ -110,7 +112,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #6a5ac610;
+    background-color: #6a5ac622;
     color: #c9c5e0;
     font-size: 14px;
     font-weight: 600;
@@ -144,6 +146,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+    text-decoration: none;
 }
 .purple{
     color: #6a5ac6;
@@ -166,6 +169,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 .getstartedimg{
     width: 12px;
@@ -175,7 +179,7 @@ body{
 .addbuttonpg1bg{
     margin-left: 12px;
     color: white;
-    background-color: #6a5ac611;
+    background-color: #6a5ac622;
     border: 1px solid #6a5ac6;
     padding-right: 16px;
     padding-left: 16px;
@@ -185,8 +189,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
+
+  
 
 
 
@@ -215,7 +222,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #6a5ac610;
+    background-color: #6a5ac622;
     color: #c9c5e0;
     font-size: 14px;
     font-weight: 600;
@@ -281,7 +288,7 @@ body{
 .addbuttonpg1bg{
     margin-left: 12px;
     color: white;
-    background-color: #6a5ac611;
+    background-color: #6a5ac622;
     border: 1px solid #6a5ac6;
     padding-right: 16px;
     padding-left: 16px;
@@ -293,3 +300,84 @@ body{
     align-items: center;
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .shortenlink{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shorthead{
+    font-size: 64px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 60px;
+} 
+.input {
+    max-width: 190px;
+  }
+  
+  .label {
+    position: relative;
+    display: block;
+    width: 280px;
+    border-radius: 10px;
+    border: 2px solid #5e5757;
+    padding: 15px 8px 15px 10px;
+    text-align: left;
+    box-shadow:
+      20px 20px 60px #3852c788,
+      -20px -20px 60px #19ad8888;
+  }
+  
+  .shortcut {
+    position: absolute;
+    top: 50%;
+    right: -3%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    color: #c5c5c5;
+   
+    padding: 0.3em;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .shortcutimg{
+    width: 16px;
+    margin-right: 6px;
+  }
+  
+  .search_bar {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+  } */
