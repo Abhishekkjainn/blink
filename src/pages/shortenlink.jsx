@@ -49,9 +49,8 @@ export default function ShortenLink() {
       alert('Please enter a valid email.');
       return;
     }
-
+    localStorage.setItem('email', email);
     setLoading(true); // Start loader
-
     try {
       const response = await fetch('https://blinkapi.vercel.app/add/addurl', {
         method: 'POST',
