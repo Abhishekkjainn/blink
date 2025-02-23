@@ -22,8 +22,13 @@ function App() {
 function MainContent() {
   const location = useLocation();
 
-  // Hide header when visiting a shortened URL like /:id
-  const isRedirectPage = /^\/[^/]+$/.test(location.pathname);
+  // Extract the first path segment
+  const pathSegments = location.pathname.split('/').filter(Boolean);
+
+  // Hide header only when there's exactly one dynamic segment (i.e., a shortened URL)
+  const isRedirectPage =
+    pathSegments.length === 1 &&
+    !['dashboard', 'shorten-link'].includes(pathSegments[0]);
 
   return (
     <>
