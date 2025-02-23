@@ -63,7 +63,9 @@ export default function ShortenLink() {
       const data = await response.json();
 
       if (response.ok) {
-        alert(`${data.shortCode}`);
+        alert(
+          `Shorter Link Generated at https://belinkk.vercel.app/${data.shortCode}`
+        );
         setShowModal(false);
         navigate('/dashboard'); // Redirect to dashboard
       } else {
