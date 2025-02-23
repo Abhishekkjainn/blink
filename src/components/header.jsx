@@ -23,10 +23,10 @@ export default function Header() {
         <Link to={'/shorten-link'} className="addbutton">
           <img src="./add.png" alt="add icon" className="addicon" /> Add Link
         </Link>
-        <div className="addbutton">
+        {/* <div className="addbutton">
           <img src="./scanner.png" alt="add icon" className="addicon" />{' '}
           Generate QR
-        </div>
+        </div> */}
       </div>
     </div>
   );
