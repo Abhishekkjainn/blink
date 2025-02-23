@@ -70,11 +70,13 @@ export default function Page2() {
                 type="text"
                 className="search_bar"
                 placeholder="Enter Your Email.."
-                // value={url}
-                // onChange={handleUrlChange}
+                value={email} // ✅ Bind input value to state
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
-            <div className="submitbtn">Submit</div>
+            <div className="submitbtn" onClick={handleSubmit}>
+              Submit
+            </div>
           </div>
         </div>
       ) : (
@@ -122,7 +124,12 @@ export default function Page2() {
                     {url.url}
                   </a>
 
-                  <div className="shortcode">{url.shortCode}</div>
+                  <a
+                    href={`https://belinkk.vercel.app/${url.shortCode}`}
+                    className="shortcode"
+                  >
+                    {url.shortCode}
+                  </a>
                   <div className="count">{url.clickCount || 0} Visits</div>
                   <img src="scanner.png" alt="QR Scanner" className="qrlink" />
                 </div>
