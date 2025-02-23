@@ -543,7 +543,7 @@ body{
     font-size: 20px;
     font-weight: 600;
 }
-.loader-container {
+.loader-container2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -551,16 +551,16 @@ body{
     background-color: #121212;
   }
   
-  .loader {
+  .loader2 {
     width: 50px;
     height: 50px;
     border: 5px solid #ffffff;
     border-top: 5px solid transparent;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin2 1s linear infinite;
   }
   
-  @keyframes spin {
+  @keyframes spin2 {
     100% {
       transform: rotate(360deg);
     }

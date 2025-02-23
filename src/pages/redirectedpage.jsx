@@ -18,8 +18,8 @@ export default function RedirectPage() {
   }, [id]);
 
   return (
-    <div className="loader-container">
-      <div className="loader"></div>
+    <div className="loader-container2">
+      <div className="loader2"></div>
     </div>
   );
 }
