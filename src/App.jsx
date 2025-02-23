@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Page1 />} />
         <Route path="/dashboard" element={<Page2 />} />
         <Route path="/shorten-link" element={<ShortenLink />} />
+        <Route path="/shorten-link" element={<ShortenLink />} />
       </Routes>
     </Router>
   );

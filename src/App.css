@@ -191,6 +191,233 @@ body{
     align-items: center;
     text-decoration: none;
 }
+/* Shorten Link */
+.shortenlink {
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side1 {
+    width: 50%;
+    height: 100%;
+    border-right: 0.5px solid rgb(35, 35, 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shorthead {
+    width: 75%;
+    word-wrap: break-word;
+    font-size: 64px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 64px;
+}
+
+.features {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: min-content;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 45px;
+    background-color: #6a5ac622;
+    border-radius: 8px;
+    border: 1.5px solid #6a5ac6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+}
+
+.featureicon {
+    width: 25px;
+}
+
+.featuretag {
+    width: max-content;
+    font-size: 16px;
+    color: white;
+    margin-left: 16px;
+}
+
+.side2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+    max-width: 80%;
+}
+
+.label {
+    position: relative;
+    display: block;
+    width: 60%;
+    border-radius: 10px;
+    border: 2px solid #5e5757;
+    padding: 15px 8px 15px 10px;
+    text-align: left;
+    box-shadow:
+        20px 20px 60px #3852c788,
+        -20px -20px 60px #19ad8888;
+}
+
+.shortcut {
+    position: absolute;
+    top: 50%;
+    right: -3%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    color: #c5c5c5;
+    padding: 0.3em;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.shortcutimg {
+    width: 16px;
+    margin-right: 6px;
+}
+
+.search_bar {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+}
+
+.convertbutton {
+    margin-top: 60px;
+    cursor: pointer;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: royalblue;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.convert {
+    width: 20px;
+    margin-right: 12px;
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    box-shadow: 0 5px 15px rgba(56, 56, 56, 0.3);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.modal-overlay.show .modal-content {
+    transform: translateY(0);
+}
+
+/* Modal buttons */
+.modal-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-actions button {
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+.modal-actions button:first-child {
+    background: #ccc;
+}
+
+.modal-actions button:last-child {
+    background: #6200ea;
+    color: white;
+}
+.modal-input{
+    width: 75%;
+    padding: 2.5%;
+    height: 30px;
+    border-radius:8px;
+    background-color: #222222;
+    border: 1px solid white;
+    color: white;
+}
+.loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
 
 
   
