@@ -14,7 +14,17 @@ export default function Page1() {
         Turn long, cluttered URLs into short, shareable links. Track clicks,
         analyze performance, and simplify sharing—all in a blink!
       </div>
-      <div className="page1buttons"></div>
+      <div className="page1buttons">
+        <div className="addbuttonpg1">
+          <img src="/add.png" alt="Arrow" className="getstartedimg" /> Shorten
+          Link
+        </div>
+
+        <div className="addbuttonpg1bg">
+          <img src="/dashboard.png" alt="Arrow" className="getstartedimg" />{' '}
+          Dashboard
+        </div>
+      </div>
     </div>
   );
 }
