@@ -24,6 +24,7 @@ export default function Page2() {
           setUrls(data.urls);
           setHasEmail(true);
           localStorage.setItem('email', email);
+          setEmail(email);
         } else {
           setHasEmail(false);
         }
@@ -42,49 +43,30 @@ export default function Page2() {
   };
 
   return (
-    <div className="page-container">
-      {hasEmail ? (
-        <div className="card">
-          <h2 className="card-title">Your Saved URLs</h2>
-          {urls.length > 0 ? (
-            <ul className="url-list">
-              {urls.map((url, index) => (
-                <li key={index} className="url-item">
-                  <a
-                    href={url.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="url-link"
-                  >
-                    {url.url}{' '}
-                    <span className="shortcode">({url.shortCode})</span>
-                  </a>
-                  <span className="click-count">Clicks: {url.clickCount}</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="no-urls">No URLs found.</p>
-          )}
+    <div className="page2">
+      <div className="analysis">
+        <div className="analysiscard">
+          <div className="analhead">Total URL's Created</div>
+          <div className="analvalue">
+            <div className="val">15</div>
+            <img src="/add.png" alt="" className="valicon" />
+          </div>
         </div>
-      ) : (
-        <div className="card">
-          <h2 className="card-title">Enter Your Email</h2>
-          <form onSubmit={handleSubmit} className="email-form">
-            <input
-              type="email"
-              placeholder="Enter email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="email-input"
-              required
-            />
-            <button type="submit" className="submit-button">
-              Fetch URLs
-            </button>
-          </form>
+        <div className="analysiscard">
+          <div className="analhead">Total Clicks</div>
+          <div className="analvalue">
+            <div className="val">250</div>
+            <img src="/click.png" alt="" className="valicon" />
+          </div>
         </div>
-      )}
+        <div className="analysiscard">
+          <div className="analhead">Avg Clicks per URL</div>
+          <div className="analvalue">
+            <div className="val">15</div>
+            <img src="/average.png" alt="" className="valicon" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

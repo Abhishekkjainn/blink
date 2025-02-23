@@ -16,6 +16,7 @@ body{
     justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 100;
 }
 .company{
     width: 25%;
@@ -417,11 +418,57 @@ body{
       transform: rotate(360deg);
     }
   }
-
-  
   
 
-
+  /*page2*/
+  .page2{
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding-top: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .analysis{
+    margin-top: 20px;
+    width: 75%;
+    height: 160px;
+    border: 2px solid #6200ea;
+    background-color: #6200ea15;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+  }
+  .analysiscard{
+    margin: 10px;
+    width: 35%;
+    height: 140px;
+    background-color: #6200ea;
+    border-radius: 8px;
+  }
+  .analhead{
+    font-size: 20px;
+    color: #9187cd;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .analvalue{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .val{
+    font-size: 64px;
+    color: white;
+    margin-left: 20px;
+  }
+  .valicon{
+    width: 30px;
+    margin-right: 40px;
+  }
   
 
 
