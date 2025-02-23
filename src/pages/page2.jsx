@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Page2() {
+  const navigate = useNavigate();
   const [urls, setUrls] = useState([]);
   const [hasEmail, setHasEmail] = useState(true);
   const [email, setEmail] = useState('');
@@ -56,6 +58,13 @@ export default function Page2() {
     }
   };
 
+  const switchUser = () => {
+    console.log('Switch User Clicked');
+    localStorage.removeItem('email');
+    console.log('Email removed, navigating...');
+    setHasEmail(false);
+    navigate('/dashboard');
+  };
   return (
     <div className="page2">
       {!hasEmail ? (
@@ -138,7 +147,7 @@ export default function Page2() {
               <p className="none">No URLs found.</p>
             )}
             <div className="switchuser">
-              <div className="switchuserbutton">
+              <div className="switchuserbutton" onClick={switchUser}>
                 <img src="/user.png" alt="switch user" className="switchicon" />
                 <div className="switchtag">Switch User</div>
               </div>
