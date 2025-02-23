@@ -567,6 +567,55 @@ body{
     }
   }
   
+  .switchuser{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .switchuserbutton{
+    width: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .switchicon{
+    width: 15px;
+  }
+  .switchtag{
+    color: white;
+    font-weight: 600;
+    margin-left: 12px;
+  }
+  .username{
+    color: grey;
+    width: 75%;
+    margin-top: 20px;
+  }
+  .shortcode{
+    text-decoration: none;
+    color: grey;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1000px) {
     /*Page1*/

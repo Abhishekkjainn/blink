@@ -81,6 +81,7 @@ export default function Page2() {
         </div>
       ) : (
         <>
+          <div className="username">Showing Results for - {email}</div>
           <div className="analysis">
             <div className="analysiscard">
               <div className="analhead">Total URL's Created</div>
@@ -108,7 +109,6 @@ export default function Page2() {
               </div>
             </div>
           </div>
-
           <div className="list">
             {urls.length > 0 ? (
               urls.map((url, index) => (
@@ -137,6 +137,12 @@ export default function Page2() {
             ) : (
               <p className="none">No URLs found.</p>
             )}
+            <div className="switchuser">
+              <div className="switchuserbutton">
+                <img src="/user.png" alt="switch user" className="switchicon" />
+                <div className="switchtag">Switch User</div>
+              </div>
+            </div>
           </div>
         </>
       )}
