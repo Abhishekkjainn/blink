@@ -12,9 +12,18 @@ export default function Header() {
         <Link to={'/dashboard'} className="link">
           Dashboard
         </Link>
-        <div className="link">Documentation</div>
-        <div className="link">Contact</div>
-        <div className="link">Reviews</div>
+        <a
+          href="https://github.com/Abhishekkjainn/blink/blob/main/README.md"
+          className="link"
+        >
+          Documentation
+        </a>
+        <a href="mailto:jainabhishek1904@gmail.com" className="link">
+          Contact
+        </a>
+        <a href="https://abhishekjain.vercel.app/contact" className="link">
+          Reviews
+        </a>
         <a href="https://abhishekjain.vercel.app" className="link">
           Developer
         </a>
