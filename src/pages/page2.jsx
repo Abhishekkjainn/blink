@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { QRCodeCanvas } from 'qrcode.react';
 
 export default function Page2() {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ export default function Page2() {
   const [email, setEmail] = useState('');
   const [totalClicks, setTotalClicks] = useState(0);
   const [averageClicks, setAverageClicks] = useState(0);
+  const [selectedQR, setSelectedQR] = useState(null); // Store the selected QR URL
 
   useEffect(() => {
     const storedEmail = localStorage.getItem('email');
@@ -30,14 +32,12 @@ export default function Page2() {
           localStorage.setItem('email', email);
           setEmail(email);
 
-          // Calculate total clicks
           const total = data.urls.reduce(
             (sum, url) => sum + (url.clickCount || 0),
             0
           );
           setTotalClicks(total);
 
-          // Calculate average clicks per URL
           setAverageClicks(
             data.urls.length ? (total / data.urls.length).toFixed(2) : 0
           );
@@ -59,12 +59,11 @@ export default function Page2() {
   };
 
   const switchUser = () => {
-    console.log('Switch User Clicked');
     localStorage.removeItem('email');
-    console.log('Email removed, navigating...');
     setHasEmail(false);
     navigate('/dashboard');
   };
+
   return (
     <div className="page2">
       {!hasEmail ? (
@@ -79,7 +78,7 @@ export default function Page2() {
                 type="text"
                 className="search_bar"
                 placeholder="Enter Your Email.."
-                value={email} // ✅ Bind input value to state
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </label>
@@ -140,7 +139,16 @@ export default function Page2() {
                     {url.shortCode}
                   </a>
                   <div className="count">{url.clickCount || 0} Visits</div>
-                  <img src="scanner.png" alt="QR Scanner" className="qrlink" />
+                  <img
+                    src="scanner.png"
+                    alt="QR Scanner"
+                    className="qrlink"
+                    onClick={() =>
+                      setSelectedQR(
+                        `https://belinkk.vercel.app/${url.shortCode}`
+                      )
+                    }
+                  />
                 </div>
               ))
             ) : (
@@ -154,6 +162,17 @@ export default function Page2() {
             </div>
           </div>
         </>
+      )}
+
+      {/* QR Code Popup */}
+      {selectedQR && (
+        <div className="qr-modal">
+          <div className="qr-content">
+            <h2>QR Code</h2>
+            <QRCodeCanvas value={selectedQR} size={200} />
+            <button onClick={() => setSelectedQR(null)}>Close</button>
+          </div>
+        </div>
       )}
     </div>
   );
